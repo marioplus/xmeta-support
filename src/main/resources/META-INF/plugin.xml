@@ -1,7 +1,7 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.marioplus.xmetasupport</id>
-    <name>xmeta-support</name>
+    <name>Xmeta Support</name>
     <vendor>marioplus</vendor>
 
     <depends>com.intellij.modules.platform</depends>
@@ -15,4 +15,18 @@
         <listener class="com.github.marioplus.xmetasupport.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+
+    <actions>
+        <group id="XmetaSupport.ToolsMenu"
+               popup="true"
+               searchable="false"
+               text="Xmeta Support">
+            <add-to-group group-id="ToolsMenu" anchor="last"/>
+        </group>
+        <group id="XmetaSupport.ToolsMenu.MarkAsGroup"
+               class="com.github.marioplus.xmetasupport.action.MarkAsActionGroup"
+               text="Mark As">
+            <add-to-group group-id="XmetaSupport.ToolsMenu" anchor="last"/>
+        </group>
+    </actions>
 </idea-plugin>
