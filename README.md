@@ -4,7 +4,7 @@
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 [![Downloads](https://img.shields.io/jetbrains/plugin/d/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
 
-## Template ToDo list
+## 待办事项
 - [x] Create a new [IntelliJ Platform Plugin Template][template] project.
 - [ ] Get familiar with the [template documentation][template].
 - [ ] Verify the [pluginGroup](/gradle.properties), [plugin ID](/src/main/resources/META-INF/plugin.xml) and [sources package](/src/main/kotlin).
@@ -13,6 +13,14 @@
 - [ ] Set the Plugin ID in the above README badges.
 - [ ] Set the [Deployment Token](https://plugins.jetbrains.com/docs/marketplace/plugin-upload.html).
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
+- [ ] 手动触发标记 xmeta_gen 文件夹为 生成的源
+- [ ] 自动触发标记 xmeta_gen 文件夹为 生成的源
+- [ ] 拓展 yaml 语言，识别 xmeta 框架的特殊 .xmeta.yaml
+- [ ] 类似 markdown 插件拥有窗口预览 .xmeta.yaml 生成的 Java 文件
+- [ ] 预览的 Java 支持 IDE 的语法高亮
+- [ ] 可以手动生成 Java 文件
+- [ ] 支持编辑 Java 同步生成 yaml
+- [ ] 支持 GitHub Actions
 
 <!-- Plugin description -->
 This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
