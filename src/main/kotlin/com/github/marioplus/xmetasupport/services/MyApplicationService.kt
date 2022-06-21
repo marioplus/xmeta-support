@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.marioplus.xmetasupport.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.marioplus.xmetasupport.MyBundle
 
 class MyApplicationService {
 
