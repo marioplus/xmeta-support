@@ -3,6 +3,7 @@ package com.github.marioplus.xmetasupport.action
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.DefaultActionGroup
+import com.intellij.util.containers.toArray
 
 /**
  * 标记xmeta_gen目录
@@ -13,9 +14,8 @@ import com.intellij.openapi.actionSystem.DefaultActionGroup
 class MarkAsActionGroup : DefaultActionGroup() {
 
     override fun getChildren(e: AnActionEvent?): Array<AnAction> {
-        return arrayOf(
-            MarkAsAction("动态菜单1"),
-            MarkAsAction("动态菜单2"),
-        )
+        return MarkAsAction.FolderType.values()
+            .map { MarkAsAction(it) }
+            .toArray(arrayOf())
     }
 }
