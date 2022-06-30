@@ -55,6 +55,9 @@ tasks {
         withType<JavaCompile> {
             sourceCompatibility = it
             targetCompatibility = it
+        }.configureEach {
+            // Set the JVM Args
+            options.compilerArgs = listOf("--add-exports", "java.base/jdk.internal.vm=ALL-UNNAMED")
         }
         withType<KotlinCompile> {
             kotlinOptions.jvmTarget = it
