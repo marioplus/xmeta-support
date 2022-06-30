@@ -16,25 +16,29 @@
 - [ ] 支持 GitHub Actions
 
 <!-- Plugin description -->
-This Fancy IntelliJ Platform Plugin is going to be your implementation of the brilliant ideas that you have.
 
-This specific section is a source for the [plugin.xml](/src/main/resources/META-INF/plugin.xml) file which will be extracted by the [Gradle](/build.gradle.kts) during the build process.
+## Xmeta Support
 
-To keep everything working, do not remove `<!-- ... -->` sections. 
+用于将每个模块下的 xmeta 生成的目录标记为不同类型的目录，支持5.3.0之前和之后的两种模式
+
+- 5.3.0之前 <kbd>tools</kbd> > <kbd>Xmeta Support</kbd> </kbd> > <kbd> </kbd> 5.3.0之前 <kbd>
+- 5.3.0之后 <kbd>tools</kbd> > <kbd>Xmeta Support</kbd> </kbd> > <kbd> </kbd> 5.3.0之后 <kbd>
+
 <!-- Plugin description end -->
 
 ## Installation
 
 - Using IDE built-in plugin system:
-  
-  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "xmeta-support"</kbd> >
+
+  <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>Marketplace</kbd> > <kbd>Search for "
+  xmeta-support"</kbd> >
   <kbd>Install Plugin</kbd>
-  
+
 - Manually:
 
-  Download the [latest release](https://github.com/marioplus/xmeta-support/releases/latest) and install it manually using
+  Download the [latest release](https://github.com/marioplus/xmeta-support/releases/latest) and install it manually
+  using
   <kbd>Settings/Preferences</kbd> > <kbd>Plugins</kbd> > <kbd>⚙️</kbd> > <kbd>Install plugin from disk...</kbd>
-
 
 ---
 Plugin based on the [IntelliJ Platform Plugin Template][template].

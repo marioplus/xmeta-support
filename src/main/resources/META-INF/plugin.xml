@@ -22,11 +22,14 @@
                searchable="false"
                text="Xmeta Support">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
+            <group id="XmetaSupport.ToolsMenu.MarkAsGroup"
+                   text="标记xmeta文件夹为指定类型">
+                <action text="标记xmeta文件夹为指定类型(5.3.0之前)"
+                        class="com.github.marioplus.xmetasupport.action.MarkAsActionBefore530"/>
+                <action text="标记xmeta文件夹为指定类型(5.3.0之后)"
+                        class="com.github.marioplus.xmetasupport.action.MarkAsActionAfter530"/>
+            </group>
         </group>
-        <group id="XmetaSupport.ToolsMenu.MarkAsGroup"
-               class="com.github.marioplus.xmetasupport.action.MarkAsActionGroup"
-               text="Mark As">
-            <add-to-group group-id="XmetaSupport.ToolsMenu" anchor="last"/>
-        </group>
+
     </actions>
 </idea-plugin>

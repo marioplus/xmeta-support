@@ -14,5 +14,9 @@ class Constant {
          * xmeta_gen 文件夹路径
          */
         const val X_META_GEN = "/src/main/xmeta_gen"
+        /**
+         * xmeta_temp 文件夹路径
+         */
+        const val X_META_TEMP = "/src/main/xmeta_temp"
     }
 }
