@@ -30,7 +30,6 @@ import org.jetbrains.jps.model.java.JpsJavaExtensionService
 import java.nio.file.Paths
 import java.util.*
 import javax.swing.Icon
-import kotlin.collections.Map;
 
 /**
  * 基础文件夹类型标记类
@@ -91,14 +90,14 @@ abstract class BaseMarkAsAction : AnAction() {
     abstract fun getMarkAsFoldersDefinition(): Map<String, FolderType>
 
     override fun actionPerformed(event: AnActionEvent) {
-        val project: Project = event.project ?: return;
+        val project: Project = event.project ?: return
         getMarkAsFoldersDefinition().forEach { folderEntry ->
             val path: String = folderEntry.key
             val type: FolderType = folderEntry.value
             ModuleManager.getInstance(project).modules
                 .forEach { module ->
                     if (isJavaModule(module)) {
-                        markFolderAs(project, module, path, type)
+                        markFolderAs(module, path, type)
                     } else {
                         LOG.debug("模块（${module.name}）不是 Java 模块")
                     }
@@ -164,12 +163,11 @@ abstract class BaseMarkAsAction : AnAction() {
 
     /**
      * 添加源码目录
-     * @param project 当前项目
      * @param module 模块
      * @param folderPath ，需要标记的文件夹，模块下的相对路径
      * @param folderType
      */
-    private fun markFolderAs(project: Project, module: Module, folderPath: String, folderType: FolderType) {
+    private fun markFolderAs(module: Module, folderPath: String, folderType: FolderType) {
         val path = Paths.get(getRootVf(module).path + folderPath)
         if (!path.exists() || path.isFile()) {
             LOG.debug("模块（${module.name}）不含 xmeta_gen 目录")
