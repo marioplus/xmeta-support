@@ -22,13 +22,15 @@
                searchable="false"
                text="Xmeta Support">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <group id="XmetaSupport.ToolsMenu.MarkAsGroup"
-                   text="标记xmeta文件夹为指定类型">
-                <action text="标记xmeta文件夹为指定类型(5.3.0之前)"
-                        class="com.github.marioplus.xmetasupport.action.MarkAsActionBefore530"/>
-                <action text="标记xmeta文件夹为指定类型(5.3.0之后)"
-                        class="com.github.marioplus.xmetasupport.action.MarkAsActionAfter530"/>
-            </group>
+            <action text="删除xmeta生成的文件夹"
+                    icon="AllIcons.Actions.GC"
+                    class="com.github.marioplus.xmetasupport.action.CleanBuildFolderAction"/>
+            <action text="标记xmeta文件夹为指定类型(5.3.0之前)"
+                    icon="AllIcons.Modules.SourceRoot"
+                    class="com.github.marioplus.xmetasupport.action.MarkAsActionBefore530"/>
+            <action text="标记xmeta文件夹为指定类型(5.3.0之后)"
+                    icon="AllIcons.Modules.SourceRoot"
+                    class="com.github.marioplus.xmetasupport.action.MarkAsActionAfter530"/>
         </group>
 
     </actions>
