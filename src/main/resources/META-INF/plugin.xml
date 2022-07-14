@@ -20,17 +20,24 @@
         <group id="XmetaSupport.ToolsMenu"
                popup="true"
                searchable="false"
+               icon="AllIcons.Actions.RealIntentionBulb"
                text="Xmeta Support">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <action text="删除xmeta生成的文件夹"
-                    icon="AllIcons.Actions.GC"
-                    class="com.github.marioplus.xmetasupport.action.CleanBuildFolderAction"/>
             <action text="标记xmeta文件夹为指定类型(5.3.0之前)"
-                    icon="AllIcons.Modules.SourceRoot"
-                    class="com.github.marioplus.xmetasupport.action.MarkAsActionBefore530"/>
+                    icon="AllIcons.Actions.IntentionBulb"
+                    class="com.github.marioplus.xmetasupport.action.MarkAsBefore530Action"/>
             <action text="标记xmeta文件夹为指定类型(5.3.0之后)"
-                    icon="AllIcons.Modules.SourceRoot"
-                    class="com.github.marioplus.xmetasupport.action.MarkAsActionAfter530"/>
+                    icon="AllIcons.Actions.IntentionBulb"
+                    class="com.github.marioplus.xmetasupport.action.MarkAsAfter530Action"/>
+            <action text="取消标记xmeta文件夹为指定类型"
+                    icon="AllIcons.Actions.IntentionBulbGrey"
+                    class="com.github.marioplus.xmetasupport.action.UnMarkedAction"/>
+            <action text="删除xmeta生成的文件夹(5.3.0之前)"
+                    icon="AllIcons.Actions.GC"
+                    class="com.github.marioplus.xmetasupport.action.CleanBuildFolderBefore530Action"/>
+            <action text="删除xmeta生成的文件夹(5.3.0之后)"
+                    icon="AllIcons.Actions.GC"
+                    class="com.github.marioplus.xmetasupport.action.CleanBuildFolderAfter530Action"/>
         </group>
 
     </actions>

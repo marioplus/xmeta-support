@@ -19,5 +19,10 @@ class Constant {
          * xmeta_temp 文件夹路径
          */
         const val X_META_TEMP = "/src/main/xmeta_temp"
+
+        /**
+         * xmeta yaml 存放位置
+         */
+        const val X_META_YAML = "/src/main/resources/xmeta"
     }
 }

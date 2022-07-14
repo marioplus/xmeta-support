@@ -1,17 +1,18 @@
 package com.github.marioplus.xmetasupport.action
 
 import com.github.marioplus.xmetasupport.Constant
+import com.github.marioplus.xmetasupport.enums.FolderType
 
 /**
- * 5.3.0之前
+ * 取消标记xmeta文件夹类型
  *
  * @author marioplus
- * @since 1.0.0
+ * @since 1.2.0
  */
-class MarkAsActionBefore530 : BaseMarkAsAction() {
+class UnMarkedAction : BaseMarkAsAction() {
     override fun getMarkAsFoldersDefinition(): Map<String, FolderType> {
         return mapOf(
-            Constant.X_META_GEN to FolderType.GENERATED_SOURCE,
+            Constant.X_META_GEN to FolderType.NORMAL,
             Constant.X_META_TEMP to FolderType.NORMAL,
         )
     }

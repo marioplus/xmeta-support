@@ -1,6 +1,5 @@
 package com.github.marioplus.xmetasupport.action
 
-import com.github.marioplus.xmetasupport.Constant
 import com.github.marioplus.xmetasupport.ext.module.findVfByPath
 import com.github.marioplus.xmetasupport.ext.module.isJavaModule
 import com.github.marioplus.xmetasupport.ext.project.getModules
@@ -21,26 +20,29 @@ import java.util.*
  * @author marioplus
  * @since 1.0.1
  */
-class CleanBuildFolderAction : AnAction() {
-
-    private val folderPaths = listOf(Constant.X_META_GEN, Constant.X_META_TEMP)
+abstract class BaseCleanBuildFolderAction : AnAction() {
 
     companion object {
-        private val LOG = logger<CleanBuildFolderAction>()
+        private val LOG = logger<BaseCleanBuildFolderAction>()
     }
+
+    /**
+     * 获取build产生的文件夹路径
+     */
+    abstract fun getBuildFolderPaths(): List<String>
 
     override fun actionPerformed(event: AnActionEvent) {
         val project: Project = event.project ?: return
         project.getModules()
             .filter { it.isJavaModule() }
-            .forEach { deleteVf(it, folderPaths) }
+            .forEach { deleteVfByPath(it, this.getBuildFolderPaths()) }
     }
 
     override fun update(event: AnActionEvent) {
         event.presentation.isEnabledAndVisible = Objects.nonNull(event.project)
     }
 
-    private fun deleteVf(module: Module, folderPaths: List<String>) {
+    private fun deleteVfByPath(module: Module, folderPaths: List<String>) {
         folderPaths.forEach { folderPath ->
             val vf = module.findVfByPath(folderPath) ?: return
             ApplicationManager.getApplication().runWriteAction {
