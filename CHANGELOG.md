@@ -2,7 +2,9 @@
 
 # xmeta-support Changelog
 
-## 1.2.0
+## [Unreleased]
+
+## [1.2.0] - 2022-07-14
 
 ### 增加
 
