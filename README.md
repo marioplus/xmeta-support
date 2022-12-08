@@ -8,12 +8,7 @@
 
 - [x] 手动触发标记 xmeta_gen 文件夹为 生成的源
 - [ ] 自动触发标记 xmeta_gen 文件夹为 生成的源
-- [ ] 拓展 yaml 语言，识别 xmeta 框架的特殊 .xmeta.yaml
-- [ ] 类似 markdown 插件拥有窗口预览 .xmeta.yaml 生成的 Java 文件
-- [ ] 预览的 Java 支持 IDE 的语法高亮
-- [ ] 可以手动生成 Java 文件
-- [ ] 支持编辑 Java 同步生成 yaml
-- [ ] 支持 GitHub Actions
+
 
 <!-- Plugin description -->
 
@@ -21,8 +16,8 @@
 
 用于将每个模块下的 xmeta 生成的目录标记为不同类型的目录，支持5.3.0之前和之后的两种模式
 
-- 5.3.0之前 <kbd>tools</kbd> > <kbd>Xmeta Support</kbd> </kbd> > <kbd> </kbd> 5.3.0之前 <kbd>
-- 5.3.0之后 <kbd>tools</kbd> > <kbd>Xmeta Support</kbd> </kbd> > <kbd> </kbd> 5.3.0之后 <kbd>
+- 5.3.0之前: <kbd>tools</kbd> > <kbd>Xmeta Support</kbd> > <kbd>5.3.0之前</kbd>
+- 5.3.0之后: <kbd>tools</kbd> > <kbd>Xmeta Support</kbd> > <kbd>5.3.0之后</kbd>
 
 <!-- Plugin description end -->
 
