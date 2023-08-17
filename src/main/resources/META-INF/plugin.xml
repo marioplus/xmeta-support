@@ -11,11 +11,6 @@
         <projectService serviceImplementation="com.github.marioplus.xmetasupport.services.MyProjectService"/>
     </extensions>
 
-    <applicationListeners>
-        <listener class="com.github.marioplus.xmetasupport.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </applicationListeners>
-
     <actions>
         <group id="XmetaSupport.ToolsMenu"
                popup="true"
@@ -28,7 +23,7 @@
                     icon="AllIcons.Actions.GroupByPackage"
                     class="com.github.marioplus.xmetasupport.action.MarkAsBefore530Action"/>
             <action text="标记xmeta文件夹为指定类型(5.3.0之后)"
-                    icon="AllIcons.Actions.GroupByPackage"
+                    icon="AllIcons .Actions.GroupByPackage"
                     class="com.github.marioplus.xmetasupport.action.MarkAsAfter530Action"/>
             <action text="取消标记xmeta文件夹为指定类型"
                     icon="AllIcons.Actions.GeneratedFolder"

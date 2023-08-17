@@ -12,8 +12,8 @@ import com.github.marioplus.xmetasupport.enums.FolderType
 class UnMarkedAction : BaseMarkAsAction() {
     override fun getMarkAsFoldersDefinition(): Map<String, FolderType> {
         return mapOf(
-            Constant.X_META_GEN to FolderType.NORMAL,
-            Constant.X_META_TEMP to FolderType.NORMAL,
+            Constant.XMETA_GEN to FolderType.NORMAL,
+            Constant.XMETA_TEMP to FolderType.NORMAL,
         )
     }
 }

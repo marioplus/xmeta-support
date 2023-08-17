@@ -7,7 +7,6 @@ import com.github.marioplus.xmetasupport.ext.module.modifyVfEntryAutoCommit
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationType
 import com.intellij.notification.Notifications
-import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.diagnostic.logger
 import com.intellij.openapi.module.Module
@@ -22,7 +21,7 @@ import java.util.*
  * @author marioplus
  * @since 1.0.0
  */
-abstract class BaseMarkAsAction : AnAction() {
+abstract class BaseMarkAsAction : BGTAnAction() {
 
     companion object {
         private val LOG = logger<BaseMarkAsAction>()

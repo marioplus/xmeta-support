@@ -11,6 +11,6 @@ import com.github.marioplus.xmetasupport.Constant
 class CleanBuildFolderBefore530Action : BaseCleanBuildFolderAction() {
 
     override fun getBuildFolderPaths(): List<String> {
-        return listOf(Constant.X_META_GEN, Constant.X_META_TEMP)
+        return listOf(Constant.XMETA_GEN, Constant.XMETA_TEMP)
     }
 }

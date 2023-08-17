@@ -62,10 +62,8 @@ fun Module.modifyVfEntryAutoCommit(vf: VirtualFile, modifyConsumer: Consumer<Con
     val entry = this.findContentEntry(modifiableModel, vf) ?: return
     modifyConsumer.accept(entry)
     // 提交模块状态
-    ApplicationManager.getApplication().runWriteAction {
-        modifiableModel.commit()
-        this.project.save()
-    }
+    ApplicationManager.getApplication().runWriteAction(modifiableModel::commit)
+    this.project.save()
 }
 
 /**

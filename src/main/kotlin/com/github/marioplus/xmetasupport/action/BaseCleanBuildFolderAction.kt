@@ -6,7 +6,6 @@ import com.github.marioplus.xmetasupport.ext.project.getModules
 import com.intellij.notification.Notification
 import com.intellij.notification.NotificationType
 import com.intellij.notification.Notifications
-import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.diagnostic.logger
@@ -20,7 +19,7 @@ import java.util.*
  * @author marioplus
  * @since 1.0.1
  */
-abstract class BaseCleanBuildFolderAction : AnAction() {
+abstract class BaseCleanBuildFolderAction : BGTAnAction() {
 
     companion object {
         private val LOG = logger<BaseCleanBuildFolderAction>()
