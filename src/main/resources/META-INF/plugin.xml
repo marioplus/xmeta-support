@@ -1,15 +1,10 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <id>com.github.marioplus.xmetasupport</id>
-    <name>xmeta-support</name>
+    <name>Xmeta-Support</name>
     <vendor>marioplus</vendor>
 
     <depends>com.intellij.modules.platform</depends>
-
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.marioplus.xmetasupport.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.marioplus.xmetasupport.services.MyProjectService"/>
-    </extensions>
 
     <actions>
         <group id="XmetaSupport.ToolsMenu"
@@ -19,22 +14,27 @@
                text="Xmeta Support">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
             <add-to-group group-id="MainToolbarRight" anchor="last"/>
-            <action text="标记xmeta文件夹为指定类型(5.3.0之前)"
+            <action text="标记xmeta文件夹"
                     icon="AllIcons.Actions.GroupByPackage"
-                    class="com.github.marioplus.xmetasupport.action.MarkAsBefore530Action"/>
-            <action text="标记xmeta文件夹为指定类型(5.3.0之后)"
-                    icon="AllIcons .Actions.GroupByPackage"
                     class="com.github.marioplus.xmetasupport.action.MarkAsAfter530Action"/>
-            <action text="取消标记xmeta文件夹为指定类型"
+            <action text="取消标记xmeta文件夹"
                     icon="AllIcons.Actions.GeneratedFolder"
                     class="com.github.marioplus.xmetasupport.action.UnMarkedAction"/>
-            <action text="删除xmeta生成的文件夹(5.3.0之前)"
-                    icon="AllIcons.Actions.PopFrame"
-                    class="com.github.marioplus.xmetasupport.action.CleanBuildFolderBefore530Action"/>
-            <action text="删除xmeta生成的文件夹(5.3.0之后)"
+            <action text="删除xmeta文件夹"
                     icon="AllIcons.Actions.PopFrame"
                     class="com.github.marioplus.xmetasupport.action.CleanBuildFolderAfter530Action"/>
         </group>
 
+        <group id="XmetaSupport.ToolsMenu.Before530"
+               popup="true"
+               text="5.3.0 之前">
+            <add-to-group group-id="XmetaSupport.ToolsMenu" anchor="last"/>
+            <action text="标记xmeta文件夹"
+                    icon="AllIcons.Actions.GroupByPackage"
+                    class="com.github.marioplus.xmetasupport.action.MarkAsBefore530Action"/>
+            <action text="删除xmeta文件夹"
+                    icon="AllIcons.Actions.PopFrame"
+                    class="com.github.marioplus.xmetasupport.action.CleanBuildFolderBefore530Action"/>
+        </group>
     </actions>
 </idea-plugin>
