@@ -11,10 +11,9 @@ import com.intellij.openapi.roots.ModuleRootManager
 import com.intellij.openapi.vfs.VfsUtilCore
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.openapi.vfs.VirtualFileManager
-import com.intellij.util.io.exists
-import com.intellij.util.io.isFile
 import java.nio.file.Paths
 import java.util.function.Consumer
+import kotlin.io.path.isDirectory
 
 /**
  * module 相关拓展
@@ -46,7 +45,7 @@ fun Module.getRootVf(): VirtualFile {
  */
 fun Module.findVfByPath(folderPath: String): VirtualFile? {
     val path = Paths.get(this.getRootVf().path + folderPath)
-    if (!path.exists() || path.isFile()) {
+    if (!path.isDirectory()) {
         this.thisLogger().debug("模块（${this.name}）不含 $folderPath 目录")
         return null
     }
